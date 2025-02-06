@@ -4,9 +4,11 @@ type FunFactsProps = {
 
 function AnimalFunFactsList({ funFacts }: FunFactsProps) {
   return (
-    <ul>
+    <ul className="h-full bg-slate-700 py-4 pr-6 pl-12">
       {funFacts.map((fact, i) => (
-        <li key={i}>{fact}</li>
+        <li className="list-disc text-lg" key={i}>
+          {fact}
+        </li>
       ))}
     </ul>
   );
