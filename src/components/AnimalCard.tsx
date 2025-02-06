@@ -11,8 +11,8 @@ function AnimalCard({
   funFacts,
 }: Animal) {
   return (
-    <article className="flex flex-col items-center gap-3 rounded-lg border border-gray-500 text-gray-300">
-      <div className="flex h-full flex-col items-center p-8">
+    <article className="grid grid-rows-2 items-center gap-3 rounded-lg border border-gray-500 text-gray-300 xl:grid-rows-3">
+      <div className="h-full grid-rows-subgrid items-center p-8 xl:row-span-2">
         <h3 className="text-center text-4xl font-bold tracking-wider">
           <span className="mb-2 block text-8xl">{emoji}</span>
           {name}
@@ -22,7 +22,7 @@ function AnimalCard({
           <li>{habitat}</li>
           <li>{diet}</li>
         </ul>
-        <p className="text-lg">{lifespan} years</p>
+        <p className="text-center text-lg">{lifespan} years</p>
       </div>
       <AnimalFunFactsList funFacts={funFacts} />
     </article>
